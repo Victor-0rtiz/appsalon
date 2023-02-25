@@ -18,7 +18,7 @@
         <form class="formulario">
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" value="<?php echo $nombre ?>" disabled>
+                <input type="text" id="nombre" value="<?php echo $nombre ." ".$apellido ; ?>" disabled> 
             </div>
             <div class="campo">
                 <label for="fecha">Fecha</label>
