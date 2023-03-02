@@ -28,12 +28,14 @@
                 <label for="hora">Hora</label>
                 <input type="time" id="hora">
             </div>
+            <input type="hidden" id="id" value="<?php echo $id; ?>" >
         </form>
 
     </div>
-    <div class="seccion" id="paso-3">
+    <div class="seccion contenido-resumen" id="paso-3">
         <h2>Resumen</h2>
         <p>Verifica que la informacion sea correcta</p>
+        
 
     </div>
     <div class="paginacion">
@@ -42,6 +44,9 @@
     </div>
 </div>
 <?php 
-$script= " <script src='build/js/app.js'></script>";
+$script= " 
+<link href='https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css' rel='stylesheet'>
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js'></script>
+<script src='build/js/app.js'></script>";
 
 ?>

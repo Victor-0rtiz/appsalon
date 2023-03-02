@@ -11,10 +11,8 @@ class CitaController
         session_start();
         $nombre = $_SESSION["nombre"];
         $apellido = $_SESSION["apellido"];
+        $id = $_SESSION["id"];
                
-        $router->render("cita/index",["nombre"=>$nombre, "apellido"=> $apellido]);    
-    }
+        $router->render("cita/index",["nombre"=>$nombre, "apellido"=> $apellido, "id"=>$id]);    
+    }    
 }
-
-
-?>
