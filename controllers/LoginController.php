@@ -45,7 +45,10 @@ class LoginController
     public static function logout(Router $router)
     {
 
-        $router->render("login", []);
+        session_start();
+        $_SESSION=[];
+        header("location: /");
+        
     }
 
     //?Controlador de Olvide

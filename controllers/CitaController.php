@@ -9,6 +9,7 @@ class CitaController
     {
 
         session_start();
+         isAuth();
         $nombre = $_SESSION["nombre"];
         $apellido = $_SESSION["apellido"];
         $id = $_SESSION["id"];
