@@ -42,7 +42,7 @@ $router->get("/admin", [AdminController::class, "index"]);
 //! API
 
 $router->get("/api/servicios", [APIController::class, "index"]);
-$router->post("/api/citas", [APIController::class, "index"]); 
+$router->post("/api/citas", [APIController::class, "guardar"]); 
 
 
 

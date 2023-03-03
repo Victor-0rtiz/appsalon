@@ -18,11 +18,11 @@ class APIController
 
         $cita = new Citas($_POST);
         $respuesta = $cita->guardar();
-
         $id = $respuesta["id"];
+
         $idServicios = explode(",", $_POST["servicios"]);
         foreach ($idServicios as $idServicio) {
-           $arg=["citaId" => $id, "servicioId"=>$idServicio];
+           $arg=["citaId"=> $id, "servicioId"=>$idServicio];
            $servicio= new CitaServicios($arg);
            $servicio->guardar();
         }
