@@ -1,1 +1,5 @@
-web: php -S 0.0.0.0:3000/public
+location / {
+  if (!-e $request_filename){
+    rewrite ^(.*)$ /index.php break;
+  }
+}
