@@ -8,11 +8,14 @@ include_once __DIR__ . "/../templates/barra.php";
     <form class="formulario">
         <div class="campo">
             <label for="fecha">Fecha</label>
-            <input type="date" name="fecha" id="fecha">
+            <input type="date" name="fecha" id="fecha" value="<?php echo $fecha;?>">
         </div>
     </form>
 
 </div>
+<?php if ( count($citas)==0) {?>
+    <h2>No hay citas en esta fecha</h2>
+<?php }?>
 <div class="citas-admin">
     <ul class="citas">
         <?php
@@ -50,3 +53,6 @@ include_once __DIR__ . "/../templates/barra.php";
     </ul>
 
 </div>
+<?php
+$script= "<script src='build/js/buscador.js'></script>";;
+?>
