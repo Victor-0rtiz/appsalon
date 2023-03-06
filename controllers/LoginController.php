@@ -25,8 +25,11 @@ class LoginController
                         $_SESSION["apellido"] = $usuario->apellido;
                         $_SESSION["email"] = $usuario->email;
                         $_SESSION["login"] = true;
+
+
                         if ($usuario->admin == 1) {
-                            $_SESSION["admin"] == $usuario->admin ?? null;
+                            $_SESSION["admin"] = $usuario->admin ?? null;
+
                             header("location: /admin");
                         } else {
                             header("location: /cita");
@@ -46,9 +49,8 @@ class LoginController
     {
 
         session_start();
-        $_SESSION=[];
+        $_SESSION = [];
         header("location: /");
-        
     }
 
     //?Controlador de Olvide

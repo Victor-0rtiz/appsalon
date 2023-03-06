@@ -9,12 +9,16 @@ class AdminController
 {
     public static function index(Router $router)
     {
+
+        session_start();
+        isAdm();
+               
         $fecha = $_GET["fecha"] ?? date("Y-m-d");
         $fechaVerificada = explode("-", $fecha);
         if (!checkdate($fechaVerificada[1], $fechaVerificada[2], $fechaVerificada[0])) {
             header("location: /404");
         }
-        session_start();
+        
 
         $consulta = "SELECT citas.id, citas.hora, CONCAT( usuarios.nombre, ' ', usuarios.apellido) as cliente, ";
         $consulta .= " usuarios.email, usuarios.telefono, servicios.nombre as servicio, servicios.precio  ";

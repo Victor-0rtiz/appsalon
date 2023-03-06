@@ -1,0 +1,22 @@
+{
+    "name": "neros/appsalon",
+    "description": "Proyecto MVC con php, mysql, sass, etc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controllers\\": "./controllers",
+            "Model\\": "./models",
+            "Clases\\": "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Victor Oss",
+            "email": "vicjosneros@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.7"
+    }
+}
